@@ -8,8 +8,8 @@ public class Main {
         String term  = scanner.nextLine();
         String definition = scanner.nextLine();
         String answer = scanner.nextLine();
-        System.out.println(definition.equalsIgnoreCase(answer) ?
-                "Your answer is right!"
+        System.out.println(definition.equalsIgnoreCase(answer)
+                ? "Your answer is right!"
                 : "Your answer is wrong...");
     }
 }
