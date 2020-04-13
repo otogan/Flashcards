@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a1306d-ff6f-4be3-a344-6eb4f90216e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +53,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.16699219" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -129,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585508270616</updated>
-      <workItem from="1586799845075" duration="958000" />
+      <workItem from="1586799845075" duration="2190000" />
     </task>
     <servers />
   </component>
@@ -177,11 +175,11 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="1397" height="300" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1585696193647" />
-    <state x="299" y="79" key="SettingsEditor" timestamp="1586800838020">
+    <state x="299" y="79" key="SettingsEditor" timestamp="1586801536966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="224" y="70" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1586401023553" />
-    <state x="299" y="79" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586800838020" />
+    <state x="299" y="79" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586801536966" />
     <state x="213" y="546" key="com.intellij.ide.util.TipDialog" timestamp="1586633569483">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
