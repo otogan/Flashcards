@@ -8,7 +8,7 @@ import java.util.Set;
 public class Main {
     private static String getInput(Set<String> checkList, boolean isCard, int i, Scanner scanner) {
         String input;
-        boolean asking = true;
+        boolean asking;
         if (isCard) {
             System.out.println("The card #" + (i + 1) + ":");
         } else {
@@ -36,8 +36,6 @@ public class Main {
 
         Map<String, String> termMap = new LinkedHashMap<>();
         Map<String, String> definitionMap = new LinkedHashMap<>();
-        String[] terms = new String[n];
-        String[] definitions = new String[n];
 
         for (int i = 0; i < n; i++) {
             String term = getInput(termMap.keySet(), true, i, scanner);

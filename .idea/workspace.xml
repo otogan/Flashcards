@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54a1306d-ff6f-4be3-a344-6eb4f90216e6" name="Default Changelist" comment="">
-<<<<<<< HEAD
-=======
-      <change afterPath="$PROJECT_DIR$/Flashcards/task/test/common/FlashcardsStage5Test.kt" afterDir="false" />
+    <list default="true" id="d545b90a-2de4-45ff-9579-3ed56bd5d1b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
->>>>>>> 02f1b8b43496f85b772db22db49e3ddbda5715aa
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcards/A good stack/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/A good stack/task-info.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/FlashcardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/FlashcardsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/common/DialogClue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/common/DialogClue.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/common/FlashcardsStage4Test.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/src/flashcards/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/src/flashcards/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,31 +26,13 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Flashcards" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1ZobD1cGWFQCL04IsNka799Ykga" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1aVg6IvoECHjweCHfsWuBt3SUBj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -65,45 +40,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.16699219" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="show.inlinked.gradle.project.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Main (4)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Problems-Digits_from_0_to_9_in_a_single_line_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Problems-Spell_checker_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Problems-Sherlock_Holmes_and_the_mystery_of_anagrams_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="flashcards.Main" />
       <module name="Flashcards-task_main" />
       <extension name="coverage">
@@ -116,19 +55,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Problems-Initializing_an_array_of_characters_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -138,84 +66,34 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="54a1306d-ff6f-4be3-a344-6eb4f90216e6" name="Default Changelist" comment="" />
-      <created>1585508270616</created>
+      <changelist id="d545b90a-2de4-45ff-9579-3ed56bd5d1b2" name="Default Changelist" comment="" />
+      <created>1586826000491</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585508270616</updated>
-      <workItem from="1586799845075" duration="2190000" />
+      <updated>1586826000491</updated>
     </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="526" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1586734026125">
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom" timestamp="1586826448514">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="526" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1586734026125" />
-    <state x="599" y="259" key="FileChooserDialogImpl" timestamp="1586800758356">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="599" y="259" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586800758356" />
-    <state width="1397" height="211" key="GridCell.Tab.0.bottom" timestamp="1586790274486">
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1586826448514" />
+    <state width="1397" height="242" key="GridCell.Tab.0.center" timestamp="1586826448514">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="211" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1586790274486" />
-    <state width="1397" height="211" key="GridCell.Tab.0.center" timestamp="1586790274486">
+    <state width="1397" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1586826448514" />
+    <state width="1397" height="242" key="GridCell.Tab.0.left" timestamp="1586826448513">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="211" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1586790274486" />
-    <state width="1397" height="211" key="GridCell.Tab.0.left" timestamp="1586790274485">
+    <state width="1397" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1586826448513" />
+    <state width="1397" height="242" key="GridCell.Tab.0.right" timestamp="1586826448514">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="211" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1586790274485" />
-    <state width="1397" height="211" key="GridCell.Tab.0.right" timestamp="1586790274486">
+    <state width="1397" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1586826448514" />
+    <state x="417" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1586826012624">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="211" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1586790274486" />
-    <state width="1397" height="300" key="GridCell.Tab.1.bottom" timestamp="1585696193647">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1585696193647" />
-    <state width="1397" height="300" key="GridCell.Tab.1.center" timestamp="1585696193647">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1585696193647" />
-    <state width="1397" height="300" key="GridCell.Tab.1.left" timestamp="1585696193646">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1585696193646" />
-    <state width="1397" height="300" key="GridCell.Tab.1.right" timestamp="1585696193647">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1585696193647" />
-<<<<<<< HEAD
-    <state x="299" y="79" key="SettingsEditor" timestamp="1586801536966">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="224" y="70" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1586401023553" />
-    <state x="299" y="79" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586801536966" />
-    <state x="213" y="546" key="com.intellij.ide.util.TipDialog" timestamp="1586633569483">
-=======
-    <state x="224" y="70" key="SettingsEditor" timestamp="1586801586783">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="224" y="70" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1586801586783" />
-    <state x="299" y="79" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586800838020" />
-    <state x="213" y="546" key="com.intellij.ide.util.TipDialog" timestamp="1586801426443">
->>>>>>> 02f1b8b43496f85b772db22db49e3ddbda5715aa
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="213" y="546" key="com.intellij.ide.util.TipDialog/0.0.1440.920@0.0.1440.920" timestamp="1586801426443" />
-    <state x="463" y="89" key="refactoring.ChangeSignatureDialog" timestamp="1585793194987">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="463" y="89" key="refactoring.ChangeSignatureDialog/0.0.1440.920@0.0.1440.920" timestamp="1585793194987" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1586640709790">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1586640709790" />
+    <state x="417" y="285" key="com.intellij.ide.util.TipDialog/0.0.1440.920@0.0.1440.920" timestamp="1586826012624" />
   </component>
 </project>
