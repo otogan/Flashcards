@@ -41,6 +41,8 @@
       <module name="Problems-Check_if_an_array_contains_two_numbers_test" target="11" />
       <module name="Problems-Check_if_an_array_is_sorted_ascending_main" target="11" />
       <module name="Problems-Check_if_an_array_is_sorted_ascending_test" target="11" />
+      <module name="Problems-Check_the_value_main" target="11" />
+      <module name="Problems-Check_the_value_test" target="11" />
       <module name="Problems-Classes_for_Hospital_main" target="11" />
       <module name="Problems-Classes_for_Hospital_test" target="11" />
       <module name="Problems-Complex_main" target="11" />
@@ -73,6 +75,8 @@
       <module name="Problems-Employees_test" target="11" />
       <module name="Problems-Find_mistake_main" target="11" />
       <module name="Problems-Find_mistake_test" target="11" />
+      <module name="Problems-Find_the_seed_main" target="11" />
+      <module name="Problems-Find_the_seed_test" target="11" />
       <module name="Problems-Fix_the_program__1__main" target="11" />
       <module name="Problems-Fix_the_program__1__test" target="11" />
       <module name="Problems-Fix_the_program__2__main" target="11" />
@@ -81,6 +85,10 @@
       <module name="Problems-Fix_the_program_test" target="11" />
       <module name="Problems-From_0_to_4_main" target="11" />
       <module name="Problems-From_0_to_4_test" target="11" />
+      <module name="Problems-Gaussian_random_numbers_main" target="11" />
+      <module name="Problems-Gaussian_random_numbers_test" target="11" />
+      <module name="Problems-Generate_random_numbers_main" target="11" />
+      <module name="Problems-Generate_random_numbers_test" target="11" />
       <module name="Problems-Getting_submaps_main" target="11" />
       <module name="Problems-Getting_submaps_test" target="11" />
       <module name="Problems-Getting_the_fullname_main" target="11" />

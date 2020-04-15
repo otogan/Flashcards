@@ -1,9 +1,6 @@
 package flashcards;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     private static String getInput(Set<String> checkList, boolean isCard, int i, Scanner scanner) {

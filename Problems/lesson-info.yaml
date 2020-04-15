@@ -82,3 +82,7 @@ content:
 - String to double conversion
 - Catching some exceptions
 - Converting and multiplying
+- Check the value
+- Find the seed
+- Generate random numbers
+- Gaussian random numbers
