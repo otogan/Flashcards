@@ -19,6 +19,8 @@
       <module name="Problems-Alphabetical_order_test" target="11" />
       <module name="Problems-Application_as_a_class_main" target="11" />
       <module name="Problems-Application_as_a_class_test" target="11" />
+      <module name="Problems-Are_siblings_main" target="11" />
+      <module name="Problems-Are_siblings_test" target="11" />
       <module name="Problems-Army_main" target="11" />
       <module name="Problems-Army_test" target="11" />
       <module name="Problems-Avoid_NPE_main" target="11" />
