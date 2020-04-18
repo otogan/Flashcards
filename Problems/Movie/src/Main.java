@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 class Movie {
     private String title;
     private String desc;

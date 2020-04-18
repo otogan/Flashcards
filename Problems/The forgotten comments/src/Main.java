@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 //The restriction: the class should have the name Main
 public class Main {
 
@@ -5,4 +6,5 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("It's compiled!"); //It prints "It's compiled!"
     }
+
 }

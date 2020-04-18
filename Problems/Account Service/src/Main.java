@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 interface AccountService {
     /**
      * It finds an account by owner id

@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 /**
 
 Object-based box class that requires casting every time you want to get some specific stuff from it, e.g.:

@@ -1,7 +1,7 @@
 package common
 
-import org.hyperskill.hstest.v6.testcase.CheckResult
-import org.hyperskill.hstest.v6.testcase.TestCase
+import org.hyperskill.hstest.testcase.CheckResult
+import org.hyperskill.hstest.testcase.TestCase
 
 
 // ---- DialogClue ----
@@ -44,7 +44,7 @@ class OutputLine(val checker: (text: String, ctx: Context) -> CheckResult) : Phr
  * we need to pass all inputs first, and then start checking outputs. */
 fun user(text: String, updateContext: (ctx: Context) -> Unit = {}) = UserLine(text, updateContext)
 
-fun anyLine() = OutputLine { _, _ -> CheckResult.TRUE }
+fun anyLine() = OutputLine { _, _ -> CheckResult.correct(); }
 
 fun containing(
         vararg parts: String,
@@ -69,11 +69,11 @@ fun containing(
     for (part in parts) {
         startIndex = line.indexOf(part, startIndex, ignoreCase)
         if (startIndex == -1) {
-            return@OutputLine CheckResult.FALSE(buildFeedback())
+            return@OutputLine CheckResult.wrong(buildFeedback())
         }
     }
     updateContext(context) // everything is correct, update context
-    CheckResult.TRUE
+    CheckResult.correct();
 }
 
 class DialogClue(private val phrases: List<PhraseLine>) {
@@ -88,7 +88,7 @@ class DialogClue(private val phrases: List<PhraseLine>) {
         val lines = output.lines()
                 .filter { it.isNotBlank() }
 
-        fun wrongOutputSizeFeedback() = CheckResult.FALSE("The number of lines in your output is ${lines.size}, " +
+        fun wrongOutputSizeFeedback() = CheckResult.wrong("The number of lines in your output is ${lines.size}, " +
                 "but it should be ${outputPhrases.size}. " +
                 "Check, that you output your lines with println, not print. And there are no extra outputs.")
 
@@ -106,8 +106,8 @@ class DialogClue(private val phrases: List<PhraseLine>) {
 
                     val line: String = lineIter.next()
                     val result = phraseLine.checker(line, context)
-                    if (result != CheckResult.TRUE) {
-                        return CheckResult.FALSE(result.feedback)
+                    if (!result.isCorrect) {
+                        return CheckResult.wrong(result.feedback)
                     }
                 }
             }
@@ -117,7 +117,7 @@ class DialogClue(private val phrases: List<PhraseLine>) {
             return wrongOutputSizeFeedback()
         }
 
-        return CheckResult.TRUE
+        return CheckResult.correct();
     }
 }
 

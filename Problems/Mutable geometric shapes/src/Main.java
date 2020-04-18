@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 interface Movable {
 
     void move(float dx, float dy);
@@ -8,7 +9,7 @@ interface Scalable {
     void scale(float factor);
 }
 
-interface MutableShape extends Movable, Scalable {}
+interface MutableShape extends Movable, Scalable { }
 
 final class Circle implements MutableShape {
 

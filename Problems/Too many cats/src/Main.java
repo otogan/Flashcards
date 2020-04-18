@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 class Cat {
     String name;
     int age;

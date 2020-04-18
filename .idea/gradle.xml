@@ -69,10 +69,10 @@
             <option value="$PROJECT_DIR$/Problems/Output elements" />
             <option value="$PROJECT_DIR$/Problems/Pastry packing optimization" />
             <option value="$PROJECT_DIR$/Problems/Preparing full name" />
+            <option value="$PROJECT_DIR$/Problems/Printing strings in the same order" />
             <option value="$PROJECT_DIR$/Problems/Project constants and methods" />
             <option value="$PROJECT_DIR$/Problems/Publication and its subclasses" />
             <option value="$PROJECT_DIR$/Problems/Publications" />
-            <option value="$PROJECT_DIR$/Problems/ReadFileExample" />
             <option value="$PROJECT_DIR$/Problems/Removing duplicates and sorting" />
             <option value="$PROJECT_DIR$/Problems/Removing elements" />
             <option value="$PROJECT_DIR$/Problems/Return empty string when argument is null" />
@@ -84,6 +84,7 @@
             <option value="$PROJECT_DIR$/Problems/Sherlock Holmes and removing of characters" />
             <option value="$PROJECT_DIR$/Problems/Sherlock Holmes and the mystery of anagrams" />
             <option value="$PROJECT_DIR$/Problems/Spell checker" />
+            <option value="$PROJECT_DIR$/Problems/Squares list" />
             <option value="$PROJECT_DIR$/Problems/Strict superset" />
             <option value="$PROJECT_DIR$/Problems/String to double conversion" />
             <option value="$PROJECT_DIR$/Problems/Substitution cipher" />

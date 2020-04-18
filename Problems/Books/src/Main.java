@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 // write your class here
 class Book {
     String title;

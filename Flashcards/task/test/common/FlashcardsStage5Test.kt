@@ -1,11 +1,11 @@
 package common
 
-import org.hyperskill.hstest.v6.stage.BaseStageTest
-import org.hyperskill.hstest.v6.testcase.CheckResult
-import org.hyperskill.hstest.v6.testcase.TestCase
+import org.hyperskill.hstest.stage.StageTest
+import org.hyperskill.hstest.testcase.CheckResult
+import org.hyperskill.hstest.testcase.TestCase
 import flashcards.Main
 
-abstract class FlashcardsStage5Test : BaseStageTest<DialogClue>(Main::class.java) {
+abstract class FlashcardsStage5Test : StageTest<DialogClue>(Main::class.java) {
 
     // how to remove files? Now at least rewrite in the first test:
     override fun generate(): List<TestCase<DialogClue>> {
@@ -234,14 +234,14 @@ abstract class FlashcardsStage5Test : BaseStageTest<DialogClue>(Main::class.java
                     OutputLine { text, ctx ->
                         val askedCard = text.dropWhile { it != '"' }.dropLastWhile { it != '"' }.trim('"')
                         if (askedCard.isEmpty()) {
-                            return@OutputLine CheckResult.FALSE("Not found card in quotes. " +
+                            return@OutputLine CheckResult.wrong("Not found card in quotes. " +
                                     "This line should ask the definition of a random card.")
                         }
                         if (askedCard !in ctx.cardToDef) {
-                            return@OutputLine CheckResult.FALSE("You asked the definition of the non existing card: `$askedCard`.")
+                            return@OutputLine CheckResult.wrong("You asked the definition of the non existing card: `$askedCard`.")
                         }
                         ctx.rawData["lastAskedCard"] = askedCard
-                        CheckResult.TRUE
+                        CheckResult.correct();
                     },
                     // unfortunately we can't access the Context in user action, see documentation of user()
                     user(ansDef),
@@ -264,7 +264,7 @@ abstract class FlashcardsStage5Test : BaseStageTest<DialogClue>(Main::class.java
                             } else {
                                 // should not contain definition hint!!
                                 if (text.contains("you've just written the definition of")) {
-                                    CheckResult.FALSE("Your line\n`$text`\nshould NOT contain " +
+                                    CheckResult.wrong("Your line\n`$text`\nshould NOT contain " +
                                             "`you've just written the definition of`.\n$hint")
                                 } else {
                                     containing("Wrong answer", "The correct one is \"$rightAns\"", hint = hint).checker(text, ctx)

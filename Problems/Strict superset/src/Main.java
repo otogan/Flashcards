@@ -1,4 +1,7 @@
-import java.util.*;
+// Posted from EduTools plugin
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Main {

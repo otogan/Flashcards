@@ -6,8 +6,8 @@ files:
   text: |
     package common
 
-    import org.hyperskill.hstest.v6.testcase.CheckResult
-    import org.hyperskill.hstest.v6.testcase.TestCase
+    import org.hyperskill.hstest.testcase.CheckResult
+    import org.hyperskill.hstest.testcase.TestCase
 
 
     // ---- DialogClue ----
@@ -50,7 +50,7 @@ files:
      * we need to pass all inputs first, and then start checking outputs. */
     fun user(text: String, updateContext: (ctx: Context) -> Unit = {}) = UserLine(text, updateContext)
 
-    fun anyLine(updateContext: CtxUpdate = {}) = OutputLine { _, ctx -> CheckResult.TRUE.also { updateContext(ctx) } }
+    fun anyLine(updateContext: CtxUpdate = {}) = OutputLine { _, ctx -> CheckResult.correct().also { updateContext(ctx) } }
 
     fun containing(
             vararg parts: String,
@@ -75,11 +75,11 @@ files:
         for (part in parts) {
             startIndex = line.indexOf(part, startIndex, ignoreCase)
             if (startIndex == -1) {
-                return@OutputLine CheckResult.FALSE(buildFeedback())
+                return@OutputLine CheckResult.wrong(buildFeedback())
             }
         }
         updateContext(context) // everything is correct, update context
-        CheckResult.TRUE
+        CheckResult.correct();
     }
 
     class DialogClue(private val phrases: List<PhraseLine>) {
@@ -94,7 +94,7 @@ files:
             val lines = output.lines()
                     .filter { it.isNotBlank() }
 
-            fun wrongOutputSizeFeedback() = CheckResult.FALSE("The number of lines in your output is ${lines.size}, " +
+            fun wrongOutputSizeFeedback() = CheckResult.wrong("The number of lines in your output is ${lines.size}, " +
                     "but it should be ${outputPhrases.size}. " +
                     "Check, that you output your lines with println, not print. And there are no extra outputs.")
 
@@ -110,8 +110,8 @@ files:
                             return wrongOutputSizeFeedback()
                         }
                         val result = phraseLine.checker(lineIter.next(), context)
-                        if (result != CheckResult.TRUE) {
-                            return CheckResult.FALSE(result.feedback)
+                        if (!result.isCorrect) {
+                            return CheckResult.wrong(result.feedback)
                         }
                     }
                 }
@@ -121,7 +121,7 @@ files:
                 return wrongOutputSizeFeedback()
             }
 
-            return CheckResult.TRUE
+            return CheckResult.correct();
         }
     }
 
@@ -137,13 +137,13 @@ files:
   text: |
     package common
 
-    import org.hyperskill.hstest.v6.stage.BaseStageTest
-    import org.hyperskill.hstest.v6.testcase.CheckResult
-    import org.hyperskill.hstest.v6.testcase.TestCase
+    import org.hyperskill.hstest.stage.StageTest
+    import org.hyperskill.hstest.testcase.CheckResult
+    import org.hyperskill.hstest.testcase.TestCase
     import flashcards.Main
     import java.io.File
 
-    abstract class FlashcardsStage6Test : BaseStageTest<DialogClue>(Main::class.java) {
+    abstract class FlashcardsStage6Test : StageTest<DialogClue>(Main::class.java) {
 
         override fun generate(): List<TestCase<DialogClue>> {
             File("capitals.txt").delete()
@@ -223,9 +223,9 @@ files:
                             return@OutputLine result
                         }
                         if (!File(fileName).exists()) {
-                            return@OutputLine CheckResult.FALSE("The log file $fileName does not exist.")
+                            return@OutputLine CheckResult.wrong("The log file $fileName does not exist.")
                         }
-                        CheckResult.TRUE
+                        CheckResult.correct();
                     }
             ).toPhraseLines()
         }
@@ -260,25 +260,25 @@ files:
                         else -> {
                             hardestCards.forEach { card ->
                                 if (card !in text) {
-                                    return@OutputLine CheckResult.FALSE("Your line `$text`\n" +
+                                    return@OutputLine CheckResult.wrong("Your line `$text`\n" +
                                             "should contain the hardest cards " +
                                             "${hardestCards.joinToString("\", \"", "\"", "\"")} with $maxMistakes mistakes.")
                                 }
                             }
                             val numberOfHardestCards = text.count { it == '"' }
                             if (numberOfHardestCards != hardestCards.size * 2) {
-                                return@OutputLine CheckResult.FALSE("Your line `$text`\n" +
+                                return@OutputLine CheckResult.wrong("Your line `$text`\n" +
                                         "contains more hardest cards, than expected. Expected: $hardestCards.")
                             }
                             if (maxMistakes.toString() !in text) {
                                 if (numberOfHardestCards != hardestCards.size) {
-                                    return@OutputLine CheckResult.FALSE("Your line `$text`\n" +
+                                    return@OutputLine CheckResult.wrong("Your line `$text`\n" +
                                             "should contain $maxMistakes mistakes for your hardest cards.")
                                 }
                             }
                         }
                     }
-                    CheckResult.TRUE
+                    CheckResult.correct();
                 }
         )
 
@@ -402,14 +402,14 @@ files:
                         OutputLine { text, ctx ->
                             val askedCard = text.dropWhile { it != '"' }.dropLastWhile { it != '"' }.trim('"')
                             if (askedCard.isEmpty()) {
-                                return@OutputLine CheckResult.FALSE("Not found card in quotes. " +
+                                return@OutputLine CheckResult.wrong("Not found card in quotes. " +
                                         "This line should ask the definition of a random card.")
                             }
                             if (askedCard !in ctx.cardToDef) {
-                                return@OutputLine CheckResult.FALSE("You asked the definition of the non existing card: `$askedCard`.")
+                                return@OutputLine CheckResult.wrong("You asked the definition of the non existing card: `$askedCard`.")
                             }
                             ctx.rawData["lastAskedCard"] = askedCard
-                            CheckResult.TRUE
+                            CheckResult.correct();
                         },
                         // unfortunately we can't access the Context in user action, see documentation of user()
                         user(ansDef),
@@ -434,7 +434,7 @@ files:
                                 } else {
                                     // should not contain definition hint!!
                                     if (text.contains("you've just written the definition of")) {
-                                        CheckResult.FALSE("Your line\n`$text`\nshould NOT contain " +
+                                        CheckResult.wrong("Your line\n`$text`\nshould NOT contain " +
                                                 "`you've just written the definition of`.\n$hint")
                                     } else {
                                         containing("Wrong answer", "The correct one is \"$rightAns\"", hint = hint).checker(text, ctx)

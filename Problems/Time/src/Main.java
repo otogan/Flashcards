@@ -1,3 +1,4 @@
+// Posted from EduTools plugin
 class Time {
 
     int hours;
@@ -18,5 +19,4 @@ class Time {
         this.minutes = minutes;
         this.seconds = seconds;
     }
-    
 }
