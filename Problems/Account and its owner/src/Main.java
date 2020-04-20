@@ -1,5 +1,4 @@
 // Posted from EduTools plugin
-/*
 public static void main(String[] args) {
 
     // create an instance of Account here
@@ -57,4 +56,4 @@ static class User {
     public String getLastName() {
         return lastName;
     }
-}*/
+}
