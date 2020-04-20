@@ -20,14 +20,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d545b90a-2de4-45ff-9579-3ed56bd5d1b2" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/Problems/Points on the 2D plane/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Points on the 2D plane/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Points on the 2D plane/task-remote-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Points on the 2D plane/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Concat positive numbers/Problems-Concat_positive_numbers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Concat positive numbers/Problems-Concat_positive_numbers_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Concat positive numbers/Problems-Concat_positive_numbers_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Find the nearest number/Problems-Find_the_nearest_number.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Find the nearest number/Problems-Find_the_nearest_number_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Find the nearest number/Problems-Find_the_nearest_number_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Output the list's elements/Problems-Output_the_list's_elements.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Output the list's elements/Problems-Output_the_list's_elements_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Output the list's elements/Problems-Output_the_list's_elements_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Concat positive numbers/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Concat positive numbers/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Concat positive numbers/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Concat positive numbers/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find the nearest number/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find the nearest number/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find the nearest number/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find the nearest number/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Output the list's elements/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Output the list's elements/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Output the list's elements/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Output the list's elements/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcards/task/capitals.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/capitals.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcards/task/capitalsNew.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/capitalsNew.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Problems/Account and its owner/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Account and its owner/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/Menu, please!/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/Menu, please!/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/Statistics/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/Statistics/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/FlashcardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/FlashcardsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/common/DialogClue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/common/DialogClue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/common/FlashcardsStage5Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/common/FlashcardsStage6Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/Points on the 2D plane/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Points on the 2D plane/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Problems/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/lesson-info.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +208,7 @@
       <updated>1586826000491</updated>
       <workItem from="1587058640600" duration="764000" />
       <workItem from="1587089931680" duration="11895000" />
-      <workItem from="1587227970261" duration="8801000" />
+      <workItem from="1587227970261" duration="16674000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1586998660369</created>
@@ -220,10 +249,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1587059419713" />
-    <state x="526" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1587091251707">
+    <state x="526" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1587325834806">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="526" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1587091251707" />
+    <state x="526" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1587325834806" />
     <state x="283" y="55" key="CommitChangelistDialog2" timestamp="1586998658792">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
