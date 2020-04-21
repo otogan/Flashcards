@@ -1,0 +1,120 @@
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+remove
+The card:
+a
+Can't remove "a": there is no such card.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+add
+The card:
+a
+The definition of the card:
+a
+The pair ("a":"a") has been added.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+add
+The card:
+b
+The definition of the card:
+b
+The pair ("b":"b") has been added.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+add
+The card:
+a
+The card "a" already exists.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+add
+The card:
+c
+The definition of the card:
+a
+The definition "a" already exists.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+add
+The card:
+c
+The definition of the card:
+c
+The pair ("c":"c") has been added.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+ask
+How many times to ask?
+3
+Print the definition of "c":
+a
+Wrong answer. (The correct one is "c", you've just written the definition of "a".)
+Print the definition of "a":
+a
+Correct answer
+Print the definition of "c":
+d
+Wrong answer. (The correct one is "c".)
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest card
+The hardest card is "c". You have 2 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+ask
+How many times to ask?
+3
+Print the definition of "a":
+d
+Wrong answer. (The correct one is "a".)
+Print the definition of "c":
+c
+Correct answer
+Print the definition of "c":
+c
+Correct answer
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+ask 3
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+ask
+How many times to ask?
+3
+Print the definition of "c":
+c
+Correct answer
+Print the definition of "a":
+b
+Wrong answer. (The correct one is "a", you've just written the definition of "b".)
+Print the definition of "c":
+c
+Correct answer
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest card
+The hardest cards are "c", "a". You have 2 errors answering them.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+export
+File name:
+mycards.txt
+3 cards have been saved.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+reset stats
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+import
+File name:
+mycards.txtd
+File not found.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+import
+File name:
+mycards.txt
+3 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest cards
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+hardest card
+The hardest cards are "a", "c". You have 2 errors answering them.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+log
+File name:
+mylog.txt

@@ -8,90 +8,155 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Logger.startScanner();
         Flashcards flashcards = new Flashcards();
         String action;
         do {
-            System.out.println("Input the action (add, remove, import, export, ask, exit):");
-            action = scanner.nextLine().toLowerCase();
+            Logger.println("Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):");
+            action = Logger.scanNextLine().toLowerCase();
 
-            processAction(action, scanner, flashcards);
+            processAction(action, flashcards);
 
         } while (!action.equals("exit"));
-        System.out.println("Bye bye!");
+        Logger.println("Bye bye!");
+        Logger.closeScanner();
     }
 
-    private static void processAction(String action, Scanner scanner, Flashcards flashcards) {
+    private static void processAction(String action, Flashcards flashcards) {
         switch (action) {
             case "add":
-                System.out.println("The card:");
-                String newTerm = scanner.nextLine();
-                if (flashcards.containsCard(newTerm)) {
-                    System.out.println("The card \"" + newTerm + "\" already exists.");
-                    break;
-                }
-                System.out.println("The definition of the card:");
-                String newDefinition = scanner.nextLine();
-                if (flashcards.addCard(newTerm, newDefinition)) {
-                    System.out.println("The pair (\"" + newTerm + "\":\"" + newDefinition + "\") has been added.");
-                } else {
-                    System.out.println("The definition \"" + newDefinition + "\" already exists.");
-                }
+                actionAdd(flashcards);
                 break;
             case "remove":
-                System.out.println("The card:");
-                String termRemove = scanner.nextLine();
-                String cardRemoved = flashcards.removeCard(termRemove);
-                if (cardRemoved == null) {
-                    System.out.println("Can't remove \"" + termRemove + "\": there is no such card.");
-                } else {
-                    System.out.println("The card has been removed.");
-                }
+                actionRemove(flashcards);
                 break;
             case "import":
-                System.out.println("File name:");
-                String importPath = scanner.nextLine();
-                int nImported = flashcards.importCards(importPath);
-                if (nImported == -1) {
-                    System.out.println("File not found.");
-                } else {
-                    System.out.println(nImported + " cards have been loaded.");
-                }
+                actionImport(flashcards);
                 break;
             case "export":
-                System.out.println("File name:");
-                String exportPath = scanner.nextLine();
-                int nExported = flashcards.exportCards(exportPath);
-                System.out.println(nExported + " cards have been saved.");
+                actionExport(flashcards);
                 break;
             case "ask":
-                System.out.println("How many times to ask?");
-                int nAsk = Integer.parseInt(scanner.nextLine());
-                while (nAsk-- > 0) {
-                    var card = flashcards.getRandomCard();
-                    System.out.println("Print the definition of \"" + card.getKey() + "\":");
-                    String answer = scanner.nextLine();
-                    if (answer.equals(card.getValue())) {
-                        System.out.println("Correct answer");
-                    } else {
-                        System.out.print("Wrong answer. The correct one is \"" + card.getValue() + "\"");
-                        if (flashcards.containsDefinition(answer)) {
-                            System.out.println(", you've just written the definition of \"" + flashcards.getTerm(answer) + "\".");
-                        } else {
-                            System.out.println(".");
-                        }
-                    }
-                }
+                actionAsk(flashcards);
+                break;
+            case "log":
+                actionLog();
+                break;
+            case "hardest card":
+                actionHardestCard(flashcards);
+                break;
+            case "reset stats":
+                actionResetStats(flashcards);
+                break;
         }
+    }
+
+    private static void actionAdd(Flashcards flashcards) {
+        Logger.println("The card:");
+        String newTerm = Logger.scanNextLine();
+        if (flashcards.containsCard(newTerm)) {
+            Logger.println("The card \"" + newTerm + "\" already exists.");
+            return;
+        }
+        Logger.println("The definition of the card:");
+        String newDefinition = Logger.scanNextLine();
+        if (flashcards.addCard(newTerm, newDefinition)) {
+            Logger.println("The pair (\"" + newTerm + "\":\"" + newDefinition + "\") has been added.");
+        } else {
+            Logger.println("The definition \"" + newDefinition + "\" already exists.");
+        }
+    }
+
+    private static void actionRemove(Flashcards flashcards) {
+        Logger.println("The card:");
+        String termRemove = Logger.scanNextLine();
+        String cardRemoved = flashcards.removeCard(termRemove);
+        if (cardRemoved == null) {
+            Logger.println("Can't remove \"" + termRemove + "\": there is no such card.");
+        } else {
+            Logger.println("The card has been removed.");
+        }
+    }
+
+    private static void actionImport(Flashcards flashcards) {
+        Logger.println("File name:");
+        String importPath = Logger.scanNextLine();
+        int nImported = flashcards.importCards(importPath);
+        if (nImported == -1) {
+            Logger.println("File not found.");
+        } else {
+            Logger.println(nImported + " cards have been loaded.");
+        }
+    }
+
+    private static void actionExport(Flashcards flashcards) {
+        Logger.println("File name:");
+        String exportPath = Logger.scanNextLine();
+        int nExported = flashcards.exportCards(exportPath);
+        Logger.println(nExported + " cards have been saved.");
+    }
+
+    private static void actionAsk(Flashcards flashcards) {
+        Logger.println("How many times to ask?");
+        int nAsk = Integer.parseInt(Logger.scanNextLine());
+        while (nAsk-- > 0) {
+            var card = flashcards.getRandomCard();
+            Logger.println("Print the definition of \"" + card.getTerm() + "\":");
+            String answer = Logger.scanNextLine();
+            if (card.checkAnswer(answer)) {
+                Logger.println("Correct answer");
+            } else {
+                Logger.print("Wrong answer. (The correct one is \"" + card.getDefinition() + "\"");
+                if (flashcards.containsDefinition(answer)) {
+                    Logger.print(", you've just written the definition of \"" + flashcards.getTerm(answer) + "\"");
+                }
+                Logger.println(".)");
+            }
+        }
+    }
+
+    private static void actionLog() {
+        Logger.println("File name:");
+        String logPath = Logger.scanNextLine();
+        Logger.export(logPath);
+        Logger.println("The log has been saved.");
+    }
+
+    private static void actionHardestCard(Flashcards flashcards) {
+        var hardestCards = flashcards.getHardestCards();
+        var iterator = hardestCards.iterator();
+        if (iterator.hasNext()) {
+            var card = iterator.next();
+            Logger.print("The hardest card");
+            if (iterator.hasNext()) {
+                Logger.print("s are \"" + card.getTerm() + "\"");
+                while (iterator.hasNext()) {
+                    card = iterator.next();
+                    Logger.print(", \"" + card.getTerm() + "\"");
+                }
+                Logger.println(". You have " + card.getMistakes() + " errors answering them.");
+            } else {
+                Logger.println(" is \"" + card.getTerm() + "\". You have " + card.getMistakes() + " errors answering it.");
+            }
+        } else {
+            Logger.println("There are no cards with errors.");
+        }
+    }
+
+    private static void actionResetStats(Flashcards flashcards) {
+        flashcards.resetStats();
+        Logger.println("Card statistics has been reset.");
     }
 }
 
 class Flashcards {
     private LinkedHashMap<String, String> cards;
+    private LinkedHashMap<String, Integer> mistakes;
     private Random random;
 
     public Flashcards() {
         cards = new LinkedHashMap<>();
+        mistakes = new LinkedHashMap<>();
         random = new Random();
     }
 
@@ -116,12 +181,22 @@ class Flashcards {
     }
 
     public String removeCard(String term) {
+        mistakes.remove(term);
         return cards.remove(term);
     }
 
-    public Map.Entry<String, String> getRandomCard() {
-        List<Map.Entry<String, String>> entries = new ArrayList(cards.entrySet());
-        return entries.get(random.nextInt(entries.size()));
+    public Card getCard(String term) {
+        Card card = null;
+        if (containsCard(term)) {
+            card = new Card(this, term);
+        }
+        return card;
+    }
+
+    public Card getRandomCard() {
+        var terms = new ArrayList<String>(cards.keySet());
+        var term = terms.get(random.nextInt(terms.size()));
+        return getCard(term);
     }
 
     public String getTerm(String definition) {
@@ -133,6 +208,46 @@ class Flashcards {
         return null;
     }
 
+    public String getDefinition(String term) {
+        return cards.get(term);
+    }
+
+    public boolean checkAnswer(String term, String answer) {
+        if (!containsCard(term)) { return false; }
+        boolean check = getDefinition(term).equals(answer);
+        if (!check) {
+            int mistake = mistakes.getOrDefault(term, 0) + 1;
+            mistakes.put(term,  mistake);
+        }
+        return check;
+    }
+
+    public boolean checkAnswer(Card card, String answer) {
+        return checkAnswer(card.getTerm(), answer);
+    }
+
+    public int getMistakes(String term) {
+        return mistakes.getOrDefault(term, 0);
+    }
+
+    public Set<Card> getHardestCards() {
+        int highestMistake = 0;
+        for (int n : mistakes.values()) {
+            highestMistake = Math.max(n, highestMistake);
+        }
+        Set<Card> cards = new LinkedHashSet<>();
+        for (var entry : mistakes.entrySet()) {
+            if (highestMistake == entry.getValue()) {
+                cards.add(new Card(this, entry.getKey()));
+            }
+        }
+        return cards;
+    }
+
+    public void resetStats() {
+        mistakes.clear();
+    }
+
     public int importCards(String pathToFile) {
         try (Scanner scanner = new Scanner(new File(pathToFile))) {
             int count = 0;
@@ -142,6 +257,14 @@ class Flashcards {
                     String definition = scanner.nextLine();
                     updateCard(term, definition);
                     count++;
+                }
+                if (scanner.hasNextLine()) {
+                    int mistake = Integer.parseInt(scanner.nextLine());
+                    if (mistake > 0) {
+                        mistakes.put(term,mistake);
+                    } else {
+                        mistakes.remove(term);
+                    }
                 }
             }
             return count;
@@ -156,6 +279,7 @@ class Flashcards {
             for (var entry : cards.entrySet()) {
                 printWriter.println(entry.getKey());
                 printWriter.println(entry.getValue());
+                printWriter.println(mistakes.getOrDefault(entry.getKey(), 0));
                 count++;
             }
             printWriter.flush();
@@ -163,6 +287,98 @@ class Flashcards {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return -1;
+        }
+    }
+
+    public static class Card {
+        Flashcards flashcards;
+        String term;
+
+        private Card(Flashcards flashcards, String term) {
+            this.flashcards = flashcards;
+            this.term = term;
+        }
+
+        public String getTerm() {
+            return term;
+        }
+
+        public String getDefinition() {
+            return flashcards.getDefinition(term);
+        }
+
+        public int getMistakes() {
+            return flashcards.getMistakes(term);
+        }
+
+        public boolean checkAnswer(String answer) {
+            return flashcards.checkAnswer(term, answer);
+        }
+    }
+}
+
+class Logger {
+    private static LinkedList<String> logs = new LinkedList<>();
+    private static boolean newLine = true;
+    private static Scanner scanner;
+
+    private Logger() { }
+
+    private static void append(String message) {
+        logs.set(logs.size() - 1, logs.getLast() + message);
+    }
+
+    private static void add(String message) {
+        logs.add(message);
+    }
+
+    public static String log(String message) {
+        if (newLine) {
+            add(message);
+        } else {
+            append(message);
+            newLine = true;
+        }
+        return message;
+    }
+
+    public static void print(String message) {
+        if (newLine) {
+            add(message);
+            newLine = false;
+        } else {
+            append(message);
+        }
+        System.out.print(message);
+    }
+
+    public static void println(String message) {
+        log(message);
+        System.out.println(message);
+    }
+
+    public static void startScanner() {
+        scanner = new Scanner(System.in);
+    }
+
+    public static void closeScanner() {
+        if (scanner != null) scanner.close();
+        scanner = null;
+    }
+
+    public static String scanNextLine() {
+        if (scanner == null) return null; //throw new IllegalAccessException("Scanner not started!");
+        return log(scanner.nextLine());
+    }
+
+    public static void export(String pathToFile) {
+        try (PrintWriter printWriter = new PrintWriter(new File(pathToFile))) {
+            for (var message : logs) {
+                printWriter.println(message);
+            }
+            printWriter.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }
