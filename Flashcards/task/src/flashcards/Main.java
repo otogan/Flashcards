@@ -8,8 +8,13 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+        String importPath = checkArgs(args, "import");
+        String exportPath = checkArgs(args, "export");
         Logger.startScanner();
         Flashcards flashcards = new Flashcards();
+        if (importPath != null) {
+            actionImport(flashcards, importPath);
+        }
         String action;
         do {
             Logger.println("Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):");
@@ -20,6 +25,23 @@ public class Main {
         } while (!action.equals("exit"));
         Logger.println("Bye bye!");
         Logger.closeScanner();
+        if (exportPath != null) {
+            actionExport(flashcards, exportPath);
+        }
+    }
+
+    private static String checkArgs(String[] args, String arg) {
+        var iterator = Arrays.stream(args).iterator();
+        arg = "-" + arg;
+        String value = null;
+        while (iterator.hasNext()) {
+            String next = iterator.next();
+            if (Objects.equals(arg, next) && iterator.hasNext()) {
+                value = iterator.next();
+                break;
+            }
+        }
+        return value;
     }
 
     private static void processAction(String action, Flashcards flashcards) {
@@ -81,19 +103,35 @@ public class Main {
     private static void actionImport(Flashcards flashcards) {
         Logger.println("File name:");
         String importPath = Logger.scanNextLine();
-        int nImported = flashcards.importCards(importPath);
-        if (nImported == -1) {
+        if (!actionImport(flashcards, importPath)) {
             Logger.println("File not found.");
-        } else {
-            Logger.println(nImported + " cards have been loaded.");
         }
+    }
+
+    private static boolean actionImport(Flashcards flashcards, String importPath) {
+        int nImported = flashcards.importCards(importPath);
+        if (nImported > -1) {
+            Logger.println(nImported + " cards have been loaded.");
+            return true;
+        }
+        return false;
     }
 
     private static void actionExport(Flashcards flashcards) {
         Logger.println("File name:");
         String exportPath = Logger.scanNextLine();
+        if (!actionExport(flashcards, exportPath)) {
+            Logger.println("Failed exporting cards.");
+        }
+    }
+
+    private static boolean actionExport(Flashcards flashcards, String exportPath) {
         int nExported = flashcards.exportCards(exportPath);
-        Logger.println(nExported + " cards have been saved.");
+        if (nExported > -1) {
+            Logger.println(nExported + " cards have been saved.");
+            return true;
+        }
+        return false;
     }
 
     private static void actionAsk(Flashcards flashcards) {

@@ -484,6 +484,22 @@ files:
         }
     }
   learner_created: false
+- name: capitals.txt
+  visible: true
+  text: |
+    France
+    Paris
+    6
+    Russia
+    Moscow
+    4
+  learner_created: true
+- name: capitalsNew.txt
+  visible: true
+  text: |
+    France
+    Paris
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/44/stages/238/implement
-status: Unchecked
+status: Solved
 record: -1
